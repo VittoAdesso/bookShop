@@ -2,6 +2,9 @@
 
 Train some hooks
 
+
+### Pending to add styles !!! 🏗️🏗️🏗️🏗️🔎🔎🔎🦄🦄🦄 
+--- 
 ## Available Scripts to start
 ### `npm start`
 
