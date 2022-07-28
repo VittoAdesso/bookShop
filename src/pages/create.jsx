@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAppContext} from '../store/store';
 // import {Link}  from 'react-router-dom';
 import Layout from './../components/layout';
+import {useNavigate} from 'react-router-dom';
 
 const Create = () => {
 
@@ -11,10 +12,10 @@ const Create = () => {
     const [intro, setIntro] = useState('');
     const [completed, setCompleted] = useState(false);
     const [review, setReview] = useState('');
-
+    
     // pass a function 
     const store = useAppContext();
-
+    const navigate = useNavigate(); // to redirect an ther page if correct create
 
     function handleChange(e){
         // const textInput = e.target.textInput;
@@ -71,7 +72,8 @@ const Create = () => {
             review,
         }
         // is a const before declare
-        store.createItem(newBook);
+        store.createItem(newBook); // to create a new book
+        navigate('/'); // to redirect home or an other path
     };
 
     return (
